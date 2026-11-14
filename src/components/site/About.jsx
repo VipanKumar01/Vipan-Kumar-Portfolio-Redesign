@@ -9,10 +9,17 @@ export const About = () => (
       <div className="lg:col-span-5">
         <Reveal>
           <div className="relative aspect-[4/5] max-w-sm rounded-3xl bg-[#0a0b0f] overflow-hidden flex items-end p-6" data-testid="about-portrait-placeholder">
-            <span className="absolute -right-6 -top-10 font-display font-extrabold text-[16rem] leading-none text-[#54f446] tracking-tighter">VK</span>
-            <div className="relative">
+            <img
+              src="/Vipan%20Kumar%20Image.png"
+              alt="Vipan Kumar — Software Engineer"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+              data-testid="about-portrait-img"
+            />
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0b0f]/90 via-[#0a0b0f]/40 to-transparent pointer-events-none" />
+            <div className="relative z-10">
               <p className="font-display text-[#f2f1ec] text-2xl font-bold">Vipan Kumar</p>
-              <p className="font-mono text-xs text-zinc-400 mt-1">Software Engineer · Sardeck Services</p>
+              <p className="font-mono text-xs text-zinc-300 mt-1">Software Engineer · Sardeck Services</p>
             </div>
           </div>
         </Reveal>

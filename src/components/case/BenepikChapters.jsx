@@ -4,6 +4,8 @@ import { AuthFlow } from "./AuthFlow";
 import { EncryptionDemo } from "./EncryptionDemo";
 import { CodeBlock } from "./CodeBlock";
 import { motion } from "framer-motion";
+import { ArchFlow } from "./ArchFlow";
+import { Smartphone, ShieldCheck, KeyRound, Workflow, ShieldAlert, Database, Timer, Gauge } from "lucide-react";
 
 const SECURITY_CODE = `// Illustrative pattern — simplified, not production code
 @Bean
@@ -29,6 +31,13 @@ boolean verify(String body, String signature, byte[] key) {
 
 const TX = ["Request received", "Authenticated & authorized", "Validated & processed", "Recorded & confirmed"];
 
+const VAPT = [
+  { icon: ShieldAlert, t: "OWASP Top 10", d: "Security review and penetration testing mapped to the OWASP Top 10 before release." },
+  { icon: Database, t: "SQL injection prevention", d: "All queries use parameterized prepared statements — no string-built SQL." },
+  { icon: Timer, t: "Replay attack protection", d: "HMAC-signed requests with timestamp windows reject replayed traffic." },
+  { icon: Gauge, t: "Rate limiting", d: "A Redis token bucket throttles requests per client and IP to blunt abuse." },
+];
+
 export const BPOverview = () => (
   <section className="bg-[#f2f1ec] text-[#0a0b0f] px-4 md:px-10 py-24 md:py-32" data-testid="case-overview">
     <SectionHead index="00" label="Overview" dark={false} />
@@ -41,8 +50,21 @@ export const BPOverview = () => (
       <Reveal delay={0.1} className="lg:col-span-4 lg:col-start-9 space-y-6">
         <Point k="The product" dark={false}>Benepik Plus is an application that handles monetary operations, so every login, request and transaction has to be trustworthy.</Point>
         <Point k="My part" dark={false}>I strengthened its security end to end — authentication, authorization, API encryption — and built scalable transaction processing workflows.</Point>
+        <Point k="Security posture" dark={false}>Vulnerability assessment &amp; penetration testing aligned to the OWASP Top 10 — with SQL-injection prevention, replay protection and rate limiting.</Point>
       </Reveal>
     </div>
+    <Reveal className="mt-16">
+      <ArchFlow
+        label="Illustrative — high-level system flow"
+        testid="benepik-arch"
+        nodes={[
+          { icon: Smartphone, t: "Client", d: "Every app request is signed and encrypted." },
+          { icon: ShieldCheck, t: "HMAC / AES Encryption Layer", d: "AES payload confidentiality + HMAC integrity signatures." },
+          { icon: KeyRound, t: "Spring Security + JWT Filter", d: "Stateless auth and role-based authorization." },
+          { icon: Workflow, t: "Transactional SAGA / Microservice", d: "Distributed transactions with compensating steps." },
+        ]}
+      />
+    </Reveal>
   </section>
 );
 
@@ -86,9 +108,36 @@ export const EncryptionChapter = () => (
   </section>
 );
 
+export const VaptChapter = () => (
+  <section className="bg-[#f2f1ec] text-[#0a0b0f] px-4 md:px-10 py-24 md:py-32" data-testid="case-vapt">
+    <SectionHead index="03" label="Production security & VAPT" dark={false} />
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-14">
+      <Reveal className="lg:col-span-6">
+        <h2 className="font-display font-extrabold uppercase tracking-tighter text-5xl sm:text-6xl lg:text-7xl leading-[0.88]">
+          Hardened against<br /><span className="text-stroke [--stroke:#0a0b0f] [--stroke-fill:#f2f1ec]">OWASP</span>.
+        </h2>
+      </Reveal>
+      <Reveal delay={0.1} className="lg:col-span-5 lg:col-start-8 space-y-6">
+        <Point k="VAPT" dark={false}>Ran vulnerability assessment &amp; penetration testing aligned to the OWASP Top 10 — closing issues before they reach production.</Point>
+        <Point k="What that means" dark={false}>Not just best-practice code, but verified defenses against real attack classes.</Point>
+      </Reveal>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" data-testid="vapt-grid">
+      {VAPT.map((v, i) => (
+        <motion.div key={v.t} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ delay: i * 0.12, duration: 0.7 }}
+          className="rounded-3xl border border-black/15 bg-white/60 backdrop-blur p-6 flex flex-col gap-4">
+          <span className="w-11 h-11 rounded-xl bg-[#0a0b0f] text-[#54f446] flex items-center justify-center"><v.icon className="w-5 h-5" /></span>
+          <p className="font-display font-bold text-lg tracking-tight">{v.t}</p>
+          <p className="text-sm text-zinc-700 leading-relaxed">{v.d}</p>
+        </motion.div>
+      ))}
+    </div>
+  </section>
+);
+
 export const TxChapter = () => (
   <section className="px-4 md:px-10 py-24 md:py-32" data-testid="case-transactions">
-    <SectionHead index="03" label="Transaction workflows" />
+    <SectionHead index="04" label="Transaction workflows" />
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-14">
       <Reveal className="lg:col-span-6">
         <h2 className="font-display font-extrabold uppercase tracking-tighter text-5xl sm:text-6xl lg:text-7xl leading-[0.88]">

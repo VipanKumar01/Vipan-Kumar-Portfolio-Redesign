@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
-import { ArrowDownRight } from "lucide-react";
+import { ArrowDownRight, Download } from "lucide-react";
 import { MaskLine, Overline } from "./Primitives";
 import { HireBadge } from "./HireBadge";
 import { CodeCard } from "./CodeCard";
 import { scrollToId } from "@/lib/scroll";
-import { yearsOfExperience } from "@/data/profile";
+import { yearsOfExperience, RESUME_URL } from "@/data/profile";
 
 const WORDS = ["Web.", "APIs.", "Android."];
 
@@ -87,6 +87,19 @@ export const Hero = ({ ready }) => {
             <button onClick={() => scrollToId("#contact")} className="rounded-full border border-white/20 px-6 py-3.5 hover:border-[#54f446] hover:text-[#54f446] transition-colors" data-testid="hero-contact-btn">
               Get in touch
             </button>
+            <a
+              href={RESUME_URL}
+              download
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-semibold text-[#f2f1ec] transition-transform hover:scale-[1.03]"
+              style={{
+                border: "1px solid transparent",
+                background: "linear-gradient(#0a0b0f,#0a0b0f) padding-box, linear-gradient(120deg,#54f446,#64ffda,#ffb547) border-box",
+                boxShadow: "0 0 22px rgba(84,244,70,0.35)",
+              }}
+              data-testid="hero-resume-btn"
+            >
+              <Download className="w-4 h-4" /> Download Resume
+            </a>
           </motion.div>
         </div>
         <div className="lg:col-span-5 lg:col-start-8 [perspective:1200px]">

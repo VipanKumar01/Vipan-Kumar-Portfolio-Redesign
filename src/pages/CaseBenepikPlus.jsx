@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { CaseHero } from "@/components/case/CaseHero";
-import { BPOverview, AuthChapter, EncryptionChapter, TxChapter } from "@/components/case/BenepikChapters";
+import { BPOverview, AuthChapter, EncryptionChapter, VaptChapter, TxChapter } from "@/components/case/BenepikChapters";
 import { CaseOutro } from "@/components/case/CaseOutro";
 
 const META = [
@@ -45,6 +45,7 @@ export default function CaseBenepikPlus() {
         <BPOverview />
         <AuthChapter />
         <EncryptionChapter />
+        <VaptChapter />
         <TxChapter />
         <CaseOutro index="04" outcomes={OUTCOMES} next={{ to: "/work/intradiem", kicker: "Previous case study", label: "Intradiem" }} />
       </main>

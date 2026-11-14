@@ -12,6 +12,8 @@ export const PROFILE = {
   ],
 };
 
+export const RESUME_URL = "/Vipan%20Kumar%20Resume%20(Backend%20Developer)%2029-10-2026.pdf";
+
 export const CAREER_START = new Date(2024, 7, 1);
 
 export const yearsOfExperience = () => {

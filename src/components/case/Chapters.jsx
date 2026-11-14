@@ -1,5 +1,7 @@
 import { Reveal, SectionHead } from "@/components/site/Primitives";
+import { Router, Layers, MessagesSquare, Cpu, Server, Database } from "lucide-react";
 import { BatchDiagram } from "./BatchDiagram";
+import { ArchFlow } from "./ArchFlow";
 import { SchedulePipeline, EventQueue } from "./SchedulePipeline";
 import { CodeBlock } from "./CodeBlock";
 import { BatchResult } from "./BatchResult";
@@ -52,8 +54,23 @@ export const Overview = () => (
       <Reveal delay={0.1} className="lg:col-span-4 lg:col-start-9 space-y-6">
         <Point k="The platform" dark={false}>Intradiem is a US workforce automation platform for real-time agent activity monitoring, schedule management and automated workflow execution.</Point>
         <Point k="My part" dark={false}>Working at Sardeck Services, I contribute to Intradiem's microservices — focusing on real-time agent activity, scheduling and workflow management.</Point>
+        <Point k="Scale" dark={false}>300K+ daily users — tracked from production traffic metrics, with endpoints stress-tested under peak simulation using JMeter.</Point>
       </Reveal>
     </div>
+    <Reveal className="mt-16">
+      <ArchFlow
+        label="Illustrative — high-level system flow"
+        testid="intradiem-arch"
+        nodes={[
+          { icon: Router, t: "API Gateway", d: "Single entry point that routes and authenticates every request." },
+          { icon: Layers, t: "Service Registry", d: "Discovers and tracks live service instances." },
+          { icon: MessagesSquare, t: "Kafka Broker", d: "Event bus decoupling producers and consumers." },
+          { icon: Cpu, t: "Multithreaded Batch Worker Pool", d: "Parallel chunk execution across a bounded worker pool." },
+          { icon: Server, t: "Redis Cache", d: "Low-latency cache for sessions and hot data." },
+          { icon: Database, t: "Database", d: "Source of truth for workflows, agents and schedules." },
+        ]}
+      />
+    </Reveal>
   </section>
 );
 
@@ -74,6 +91,12 @@ export const BatchChapter = () => (
     </div>
     <Reveal><BatchDiagram /></Reveal>
     <Reveal><BatchResult /></Reveal>
+    <Reveal className="mt-4">
+      <div className="rounded-2xl border border-[#54f446]/30 bg-[#54f446]/[0.06] p-5 md:p-6 text-sm text-zinc-300 leading-relaxed" data-testid="batch-measure-note">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#54f446] mb-2">How it was achieved &amp; measured</p>
+        Replaced sequential processing with a fixed thread-pool executor using a custom bounded queue and HikariCP connection tuning, then benchmarked the parallel pipeline against the single-threaded baseline with JMeter under peak simulation — giving the 60–70% throughput gain.
+      </div>
+    </Reveal>
     <Reveal className="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
       <div className="lg:col-span-7"><CodeBlock file="ParallelBatch.java" code={BATCH_CODE} testid="batch-code" /></div>
       <div className="lg:col-span-5 rounded-3xl border border-white/10 p-6 md:p-8 space-y-4">

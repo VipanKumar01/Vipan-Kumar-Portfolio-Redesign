@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Download } from "lucide-react";
 import { Logo } from "./Primitives";
 import { scrollToId } from "@/lib/scroll";
+import { RESUME_URL } from "@/data/profile";
 
 const LINKS = [
   { id: "#work", label: "Work" },
@@ -45,6 +47,19 @@ export const Header = ({ ready }) => {
           <span className="hidden lg:flex items-center gap-2 font-mono text-xs text-zinc-400" data-testid="header-ist-clock">
             <span className="w-1.5 h-1.5 rounded-full bg-[#54f446] animate-pulse" /> IST {time}
           </span>
+          <a
+            href={RESUME_URL}
+            download
+            className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-[#f2f1ec] transition-transform hover:scale-[1.04]"
+            style={{
+              border: "1px solid transparent",
+              background: "linear-gradient(#0a0b0f,#0a0b0f) padding-box, linear-gradient(120deg,#54f446,#64ffda,#ffb547) border-box",
+              boxShadow: "0 0 20px rgba(84,244,70,0.35)",
+            }}
+            data-testid="header-resume-btn"
+          >
+            <Download className="w-4 h-4" /> Resume
+          </a>
           <button
             onClick={() => scrollToId("#contact")}
             className="rounded-full bg-[#54f446] text-[#0a0b0f] text-sm font-semibold px-5 py-2.5 hover:bg-[#f2f1ec] transition-colors"

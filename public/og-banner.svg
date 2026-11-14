@@ -1,0 +1,57 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stopColor="#0a0b0f"/>
+      <stop offset="1" stopColor="#12141c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stopColor="#54f446"/>
+      <stop offset="1" stopColor="#64ffda"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stopColor="#54f446" stopOpacity="0.30"/>
+      <stop offset="1" stopColor="#54f446" stopOpacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- decorative glows -->
+  <circle cx="1080" cy="120" r="280" fill="url(#glow)"/>
+  <circle cx="120" cy="520" r="220" fill="url(#glow)"/>
+
+  <!-- faint grid -->
+  <g stroke="#ffffff" strokeOpacity="0.05">
+    <path d="M0 160 H1200 M0 320 H1200 M0 480 H1200"/>
+    <path d="M240 0 V630 M480 0 V630 M720 0 V630 M960 0 V630"/>
+  </g>
+
+  <!-- watermark -->
+  <text x="880" y="180" fill="#ffffff" fillOpacity="0.045" fontSize="280" fontWeight="800" fontFamily="'Bricolage Grotesque', 'Arial Black', sans-serif" letterSpacing="-8">VK</text>
+
+  <!-- overline -->
+  <text x="72" y="210" fill="#54f446" fontFamily="ui-monospace, Menlo, monospace" fontSize="20" letterSpacing="6">BACKEND ENGINEER — SPRING BOOT</text>
+
+  <!-- name -->
+  <text x="70" y="330" fill="#f2f1ec" fontSize="96" fontWeight="800" fontFamily="'Bricolage Grotesque', 'Segoe UI', sans-serif" letterSpacing="-3">Vipan Kumar</text>
+
+  <!-- subtitle -->
+  <text x="72" y="392" fill="#9ca3af" fontSize="28" fontFamily="'Instrument Sans', 'Segoe UI', sans-serif">Microservices · Kafka · Redis · Secure APIs · React</text>
+
+  <!-- accent bar -->
+  <rect x="72" y="430" width="260" height="8" rx="4" fill="url(#accent)"/>
+
+  <!-- tech chips -->
+  <g fontFamily="ui-monospace, Menlo, monospace" fontSize="18">
+    <rect x="72" y="470" width="150" height="42" rx="21" fill="#ffffff" fillOpacity="0.04" stroke="#ffffff" strokeOpacity="0.08"/>
+    <text x="147" y="497" fill="#c4c8d0" textAnchor="middle">Spring Boot</text>
+    <rect x="238" y="470" width="130" height="42" rx="21" fill="#ffffff" fillOpacity="0.04" stroke="#ffffff" strokeOpacity="0.08"/>
+    <text x="303" y="497" fill="#c4c8d0" textAnchor="middle">Kafka</text>
+    <rect x="384" y="470" width="118" height="42" rx="21" fill="#ffffff" fillOpacity="0.04" stroke="#ffffff" strokeOpacity="0.08"/>
+    <text x="443" y="497" fill="#c4c8d0" textAnchor="middle">Redis</text>
+    <rect x="518" y="470" width="150" height="42" rx="21" fill="#ffffff" fillOpacity="0.04" stroke="#ffffff" strokeOpacity="0.08"/>
+    <text x="593" y="497" fill="#c4c8d0" textAnchor="middle">React.js</text>
+    <rect x="684" y="470" width="168" height="42" rx="21" fill="#ffffff" fillOpacity="0.04" stroke="#ffffff" strokeOpacity="0.08"/>
+    <text x="768" y="497" fill="#c4c8d0" textAnchor="middle">Secure APIs</text>
+  </g>
+</svg>
