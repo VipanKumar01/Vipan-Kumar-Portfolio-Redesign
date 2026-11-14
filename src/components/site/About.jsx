@@ -5,9 +5,9 @@ import { Reveal, SectionHead } from "./Primitives";
 export const About = () => (
   <section id="about" className="bg-[#f2f1ec] text-[#0a0b0f] px-4 md:px-10 py-24 md:py-36" data-testid="about-section">
     <SectionHead index="04" label="About & experience" dark={false} />
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
       <div className="lg:col-span-5">
-        <Reveal>
+        <Reveal className="lg:sticky lg:top-20 self-start">
           <div className="relative aspect-[4/5] max-w-sm rounded-3xl bg-[#0a0b0f] overflow-hidden flex items-end p-6" data-testid="about-portrait-placeholder">
             <img
               src="/Vipan%20Kumar%20Image.png"

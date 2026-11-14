@@ -25,7 +25,7 @@ export const ArchFlow = ({ label = "Illustrative — high-level system flow", no
               <n.icon className="w-5 h-5" />
             </span>
             <div>
-              <p className="font-display font-bold text-base leading-snug">{n.t}</p>
+              <p className="font-display font-bold text-base leading-snug text-[#f2f1ec]">{n.t}</p>
               <p className="mt-1 text-sm text-zinc-400 leading-relaxed">{n.d}</p>
             </div>
           </motion.div>
