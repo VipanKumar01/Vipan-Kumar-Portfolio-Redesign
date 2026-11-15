@@ -1,0 +1,58 @@
+
+name: Deploy Portfolio to Azure
+
+"on":
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build portfolio
+        run: npm run build
+        env:
+          REACT_APP_WEB3FORMS_ACCESS_KEY: ${{ secrets.WEB3FORMS_ACCESS_KEY }}
+
+      - name: Configure SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.AZURE_SSH_KEY }}
+          AZURE_HOST: ${{ secrets.AZURE_HOST }}
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/portfolio_key
+          chmod 600 ~/.ssh/portfolio_key
+          ssh-keyscan -H "$AZURE_HOST" >> ~/.ssh/known_hosts
+
+      - name: Deploy to Azure VM
+        env:
+          AZURE_HOST: ${{ secrets.AZURE_HOST }}
+          AZURE_USER: ${{ secrets.AZURE_USER }}
+        run: |
+          ssh -i ~/.ssh/portfolio_key \
+            "$AZURE_USER@$AZURE_HOST" \
+            "mkdir -p /var/www/portfolio/build"
+
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/portfolio_key" \
+            build/ \
+            "$AZURE_USER@$AZURE_HOST:/var/www/portfolio/build/"

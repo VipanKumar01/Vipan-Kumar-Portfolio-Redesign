@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+# Vipan Kumar — Portfolio Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A personal developer portfolio for **Vipan Kumar**, a backend &amp; full-stack engineer. The site highlights his work at Sardeck Services (Intradiem) and Benepik Plus through immersive case studies, a skills grid, real metrics, and a resume download.
 
-## Available Scripts
+🖥️ **Live site:** https://vipankumar.tech
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Animated home experience** — custom preloader, Lenis smooth scrolling, framer-motion reveal/mask animations.
+- **Case studies** — Intradiem &amp; Benepik Plus with hand-built flow diagrams, benchmark callouts, and interactive encryption demo.
+- **Downloadable resume** — ready in the header and hero (public PDF).
+- **Contact form** — Web3Forms-powered with Gmail/Outlook/mailto fallbacks.
+- **Custom VK monogram** — bold interlock mark used across header, preloader and favicon.
+- **SEO &amp; social ready** — per-page meta, Open Graph, Twitter Cards, JSON-LD structured data, sitemap, robots.txt, feeds.
+- **404 page** — on-brand, on any unmatched route.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧰 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Area | Tech |
+| --- | --- |
+| UI framework | React 18 (Create React App + Craco) |
+| Styling | Tailwind CSS |
+| Animation | Framer Motion, Lenis |
+| Icons | lucide-react |
+| Routing | React Router |
+| Data fetching | TanStack React Query (configured), SWR |
+| Forms | React Hook Form + Zod |
+| UI primitives | Radix UI + shadcn-style components |
+| Fonts | Bricolage Grotesque, Instrument Sans, JetBrains Mono |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```text
+frontend/
+├── public/                  # static assets, SEO files
+│   ├── index.html           # shell, meta, OG, JSON-LD
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   ├── site.webmanifest
+│   ├── llms.txt
+│   ├── feed.xml
+│   ├── humans.txt
+│   ├── security.txt
+│   ├── .well-known/security.txt
+│   ├── _redirects           # Netlify SPA fallback
+│   ├── vercel.json          # Vercel SPA rewrite
+│   ├── favicon.ico / favicon.svg
+│   ├── apple-touch-icon.png
+│   ├── og-image.png / og-banner.svg
+│   └── Vipan Kumar -Image.jpg
+└── src/
+    ├── App.js               # routes, Lenis init, root layout
+    ├── index.js
+    ├── data/profile.js       # all content: profile, skills, projects, experience
+    ├── lib/
+    │   ├── scroll.js
+    │   └── useSeo.js        # per-page SEO hook
+    ├── components/
+    │   ├── site/            # Header, Hero, About, Works, Skills, Impact, Contact, Footer, etc.
+    │   ├── case/            # case-study components (diagrams, chapters)
+    │   └── ui/              # UI primitives
+    └── pages/
+        ├── CaseIntradiem.jsx
+        ├── CaseBenepikPlus.jsx
+        └── NotFound.jsx
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+# install dependencies
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# start dev server (http://localhost:3000)
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# run tests (interactive watch)
+npm test
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# production build → build/
+npm run build
+```
 
-## Learn More
+> Note: `eject` is available but generally not needed. The project uses Craco for Tailwind config.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Environment variables
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Create a `.env` file in the project root (see `.env.example` if present):
 
-### Code Splitting
+```env
+REACT_APP_WEB3FORMS_ACCESS_KEY=your_web3forms_key
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The contact form falls back to opening the visitor’s email client if no key is set.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔧 Configuration
 
-### Making a Progressive Web App
+- **Tailwind:** `tailwind.config.js`
+- **Craco:** `craco.config.js`
+- **Path aliases:** `@/` → `src/` (see `jsconfig.json`)
+- **Content/data:** all site copy lives in `src/data/profile.js` — edit once, reflects everywhere.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📦 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Netlify
+A `public/_redirects` file (`/* /index.html 200`) is included for SPA routing. Deploy the `frontend` folder with build command `npm run build` and publish directory `build`.
 
-### Deployment
+### Vercel
+A `vercel.json` rewrite sends all routes to `/index.html`. Set build command `npm run build` and output dir `build`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Others
+For hosts without a redirect rule, ensure all non-asset routes fall back to `index.html` so `/work/*` and the 404 page work on refresh.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🧹 SEO &amp; Assets
+
+- Domain used across canonical/OG/sitemap: **https://vipankumar.tech** (update if it changes).
+- Update `og-image.png` / `og-banner.svg` to refresh social previews.
+- Regenerate `robots.txt`, `sitemap.xml`, and feeds when adding routes.
+- Favicon/monogram live in `public/favicon.svg` and `src/components/site/Primitives.jsx` (Logo).
+
+---
+
+## 📄 License
+
+© 2026 Vipan Kumar. All rights reserved.
