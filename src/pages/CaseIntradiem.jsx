@@ -4,6 +4,7 @@ import { Footer } from "@/components/site/Footer";
 import { CaseHero } from "@/components/case/CaseHero";
 import { Overview, BatchChapter, ScheduleChapter } from "@/components/case/Chapters";
 import { CaseOutro } from "@/components/case/CaseOutro";
+import { useSeo } from "@/lib/useSeo";
 
 const META = [
   { k: "Role", v: "Software Engineer — Backend" },
@@ -21,14 +22,18 @@ const OUTCOMES = [
 ];
 
 export default function CaseIntradiem() {
+  useSeo({
+    title: "Intradiem Case Study — Vipan Kumar",
+    description: "How Vipan Kumar sped up Intradiem's batch processing with multithreading and built dynamic event scheduling for a workforce automation platform serving 300K+ daily users.",
+    url: "/work/intradiem",
+    breadcrumb: "Intradiem Case Study",
+  });
+
   useEffect(() => {
-    const prev = document.title;
-    document.title = "Intradiem Case Study — Vipan Kumar";
     if (window.__lenis) {
       window.__lenis.start();
       window.__lenis.resize();
     }
-    return () => { document.title = prev; };
   }, []);
 
   return (

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://vipankumar.tech/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://vipankumar.tech/og-image.png</image:loc>
+      <image:title>Vipan Kumar — Backend &amp; Full-Stack Developer</image:title>
+      <image:caption>Portfolio of Vipan Kumar, Software Engineer at Sardeck Services</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vipankumar.tech/work/intradiem</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vipankumar.tech/og-image.png</image:loc>
+      <image:title>Intradiem Case Study — Vipan Kumar</image:title>
+      <image:caption>Multithreaded batch processing for a workforce automation platform</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vipankumar.tech/work/benepik-plus</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vipankumar.tech/og-image.png</image:loc>
+      <image:title>Benepik Plus Case Study — Vipan Kumar</image:title>
+      <image:caption>Securing a payments platform with JWT, AES and HMAC</image:caption>
+    </image:image>
+  </url>
+</urlset>

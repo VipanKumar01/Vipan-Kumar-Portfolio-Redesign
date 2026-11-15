@@ -4,6 +4,7 @@ import { Footer } from "@/components/site/Footer";
 import { CaseHero } from "@/components/case/CaseHero";
 import { BPOverview, AuthChapter, EncryptionChapter, VaptChapter, TxChapter } from "@/components/case/BenepikChapters";
 import { CaseOutro } from "@/components/case/CaseOutro";
+import { useSeo } from "@/lib/useSeo";
 
 const META = [
   { k: "Role", v: "Software Developer — Backend" },
@@ -21,14 +22,18 @@ const OUTCOMES = [
 ];
 
 export default function CaseBenepikPlus() {
+  useSeo({
+    title: "Benepik Plus Case Study — Vipan Kumar",
+    description: "How Vipan Kumar hardened Benepik Plus with JWT/OAuth2 authentication, role-based authorization, AES encryption, HMAC integrity checks, and transactional SAGA workflows.",
+    url: "/work/benepik-plus",
+    breadcrumb: "Benepik Plus Case Study",
+  });
+
   useEffect(() => {
-    const prev = document.title;
-    document.title = "Benepik Plus Case Study — Vipan Kumar";
     if (window.__lenis) {
       window.__lenis.start();
       window.__lenis.resize();
     }
-    return () => { document.title = prev; };
   }, []);
 
   return (

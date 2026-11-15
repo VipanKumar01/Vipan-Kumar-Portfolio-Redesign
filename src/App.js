@@ -18,6 +18,7 @@ import { Footer } from "@/components/site/Footer";
 import { scrollToId } from "@/lib/scroll";
 import CaseIntradiem from "@/pages/CaseIntradiem";
 import CaseBenepikPlus from "@/pages/CaseBenepikPlus";
+import NotFound from "@/pages/NotFound";
 
 const Home = () => {
   const [ready, setReady] = useState(!!window.location.hash);
@@ -124,6 +125,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/work/intradiem" element={<CaseIntradiem />} />
           <Route path="/work/benepik-plus" element={<CaseBenepikPlus />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
       <Toaster position="bottom-left" theme="dark" />

@@ -8,9 +8,9 @@ export const About = () => (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
       <div className="lg:col-span-5">
         <Reveal className="lg:sticky lg:top-20 self-start">
-          <div className="relative aspect-[4/5] max-w-sm rounded-3xl bg-[#0a0b0f] overflow-hidden flex items-end p-6" data-testid="about-portrait-placeholder">
+          <div className="relative aspect-[4/5] max-w-sm mx-auto rounded-3xl bg-[#0a0b0f] overflow-hidden flex items-end p-6" data-testid="about-portrait-placeholder">
             <img
-              src="/Vipan%20Kumar%20Image.png"
+              src="/Vipan%20Kumar%20-Image.jpg"
               alt="Vipan Kumar — Software Engineer"
               loading="lazy"
               className="absolute inset-0 w-full h-full object-cover"
@@ -45,7 +45,8 @@ export const About = () => (
                   <div className="flex items-start justify-between gap-4">
                     <h3 className="font-display font-bold text-2xl md:text-3xl tracking-tight">{e.role}</h3>
                     {e.href && (
-                      <a href={e.href} target="_blank" rel="noopener noreferrer" className="shrink-0 w-10 h-10 rounded-full border border-black/20 flex items-center justify-center hover:bg-[#0a0b0f] hover:text-[#54f446] transition-colors" data-testid={`experience-link-${i}`}>
+                      <a href={e.href} target="_blank" rel="noopener noreferrer" className="shrink-0 w-10 h-10 rounded-full border border-black/20 flex 
+                       justify-center hover:bg-[#0a0b0f] hover:text-[#54f446] transition-colors" data-testid={`experience-link-${i}`}>
                         <ArrowUpRight className="w-4 h-4" />
                       </a>
                     )}

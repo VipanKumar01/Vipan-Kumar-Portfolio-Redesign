@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Vipan Kumar — Backend &amp; Full-Stack Developer</title>
+  <subtitle>Work, projects and case studies from Vipan Kumar.</subtitle>
+  <link href="https://vipankumar.tech/"/>
+  <link rel="self" href="https://vipankumar.tech/feed.xml"/>
+  <updated>2026-01-01T00:00:00Z</updated>
+  <author>
+    <name>Vipan Kumar</name>
+    <email>vipankumar76077@gmail.com</email>
+    <uri>https://vipankumar.tech/</uri>
+  </author>
+  <id>urn:uuid:97f1a1d1-4f8e-4b2a-9d3e-2c9a1b4a7d8e</id>
+  <generator uri="https://vipankumar.tech/">Vipan Kumar Portfolio</generator>
+  <entry>
+    <title>Intradiem Case Study</title>
+    <link href="https://vipankumar.tech/work/intradiem"/>
+    <id>urn:uuid:4f2c2e3a-6a3b-4f8a-8b2c-1d3e4f5a6b7c</id>
+    <updated>2026-01-01T00:00:00Z</updated>
+    <published>2026-01-01T00:00:00Z</published>
+    <summary type="html">Multithreaded batch processing and dynamic event scheduling for a workforce automation platform serving 300K+ daily users.</summary>
+  </entry>
+  <entry>
+    <title>Benepik Plus Case Study</title>
+    <link href="https://vipankumar.tech/work/benepik-plus"/>
+    <id>urn:uuid:8e4d5f6a-7b8c-9d0e-1f2a-3b4c5d6e7f8a</id>
+    <updated>2026-01-01T00:00:00Z</updated>
+    <published>2026-01-01T00:00:00Z</published>
+    <summary type="html">Hardening a payments platform with JWT/OAuth2, AES encryption, HMAC integrity and transactional SAGA workflows.</summary>
+  </entry>
+</feed>

@@ -1,0 +1,68 @@
+# ============================================================
+# Vipan Kumar — Portfolio robots.txt
+# Domain: https://vipankumar.tech
+# ============================================================
+
+# Default policy for all crawlers
+User-agent: *
+Allow: /
+Disallow: /build/
+Disallow: /node_modules/
+Disallow: /static/
+Disallow: /.git/
+Disallow: /*?*
+Disallow: /#*
+Crawl-delay: 1
+
+# --- Google ---
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /*.jpg
+Allow: /*.png
+Allow: /*.svg
+Allow: /*.webp
+
+User-agent: Googlebot-News
+Disallow: /
+
+# --- Microsoft Bing ---
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# --- Yandex ---
+User-agent: Yandex
+Allow: /
+Crawl-delay: 5
+
+# --- Other major engines ---
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+
+User-agent: Sogou web spider
+Allow: /
+Crawl-delay: 5
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: linkedinbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Host: https://vipankumar.tech
+
+Sitemap: https://vipankumar.tech/sitemap.xml

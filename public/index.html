@@ -1,34 +1,83 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0A0B0F" />
-        <meta name="description" content="Vipan Kumar — Backend & Full-Stack Developer. Spring Boot, Microservices, React.js and React Native." />
-        <meta name="author" content="Vipan Kumar" />
-        <!-- OpenGraph -->
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Vipan Kumar" />
-        <meta property="og:title" content="Vipan Kumar — Backend & Full-Stack Developer" />
-        <meta property="og:description" content="Spring Boot microservices, Kafka, Redis, secure APIs, React.js & React Native. Building reliable software for the web, mobile and backend." />
-        <meta property="og:image" content="%PUBLIC_URL%/og-banner.svg" />
-        <meta property="og:image:type" content="image/svg+xml" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Vipan Kumar — Backend & Full-Stack Developer" />
-        <meta name="twitter:description" content="Spring Boot microservices, Kafka, Redis, secure APIs, React.js & React Native." />
-        <meta name="twitter:image" content="%PUBLIC_URL%/og-banner.svg" />
-        <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-        <!--
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0A0B0F" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="description"
+        content="Vipan Kumar — Backend & Full-Stack Developer. Spring Boot, Microservices, React.js and React Native." />
+    <meta name="author" content="Vipan Kumar" />
+    <meta name="keywords"
+        content="Vipan Kumar, Backend Developer, Full-Stack Developer, Spring Boot, Java, Microservices, Kafka, Redis, React, React Native, Portfolio" />
+    <link rel="canonical" href="https://vipankumar.tech/" />
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://vipankumar.tech/" />
+    <meta property="og:site_name" content="Vipan Kumar" />
+    <meta property="og:title" content="Vipan Kumar — Backend & Full-Stack Developer" />
+    <meta property="og:description"
+        content="Spring Boot microservices, Kafka, Redis, secure APIs, React.js & React Native. Building reliable software for the web, mobile and backend." />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Vipan Kumar — Backend & Full-Stack Developer" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@VipanKumar01" />
+    <meta name="twitter:creator" content="@VipanKumar01" />
+    <meta name="twitter:title" content="Vipan Kumar — Backend & Full-Stack Developer" />
+    <meta name="twitter:description"
+        content="Spring Boot microservices, Kafka, Redis, secure APIs, React.js & React Native." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.png" />
+    <meta name="twitter:image:alt" content="Vipan Kumar — Backend & Full-Stack Developer" />
+    <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
+    <link rel="alternate" type="application/atom+xml" title="Vipan Kumar — Atom Feed" href="%PUBLIC_URL%/feed.xml" />
+    <!-- Structured data: Person + WebSite -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                "@type": "Person",
+                "@id": "https://vipankumar.tech/#person",
+                "name": "Vipan Kumar",
+                "jobTitle": "Software Engineer",
+                "worksFor": { "@type": "Organization", "name": "Sardeck Services Pvt. Ltd." },
+                "email": "mailto:vipankumar76077@gmail.com",
+                "image": "https://vipankumar.tech/og-image.png",
+                "url": "https://vipankumar.tech/",
+                "sameAs": [
+                    "https://github.com/VipanKumar01",
+                    "https://www.linkedin.com/in/vipankumar01",
+                    "https://twitter.com/VipanKumar01",
+                    "https://www.instagram.com/vipan_singh9"
+                ]
+            }, {
+                "@type": "WebSite",
+                "@id": "https://vipankumar.tech/#website",
+                "url": "https://vipankumar.tech/",
+                "name": "Vipan Kumar — Backend & Full-Stack Developer",
+                "publisher": { "@id": "https://vipankumar.tech/#person" },
+                "inLanguage": "en"
+            }]
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <!--
         manifest.json provides metadata used when your web app is installed on a
         user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
         -->
-        <!--
+    <!--
         Notice the use of %PUBLIC_URL% in the tags above.
         It will be replaced with the URL of the `public` folder during the build.
         Only files inside the `public` folder can be referenced from the HTML.
@@ -37,13 +86,14 @@
         work correctly both with client-side routing and a non-root public URL.
         Learn how to configure a non-root public URL by running `npm run build`.
         -->
-        <title>Vipan Kumar — Backend & Full-Stack Developer</title>
-        <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-        <!--
+    <title>Vipan Kumar — Backend & Full-Stack Developer</title>
+    <script>window.addEventListener("error", function (e) { if (e.error instanceof DOMException && e.error.name === "DataCloneError" && e.message && e.message.includes("PerformanceServerTiming")) { e.stopImmediatePropagation(); e.preventDefault() } }, true);</script>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -53,5 +103,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    </body>
+</body>
+
 </html>

@@ -1,0 +1,38 @@
+# Vipan Kumar — Professional Portfolio
+
+Vipan Kumar is a Software Engineer (Backend & Full-Stack) at Sardeck Services Pvt. Ltd., India. He builds secure, scalable backend systems in Java / Spring Boot and ships polished frontends with React.js and React Native.
+
+## Contact & Profiles
+- Email: vipankumar76077@gmail.com
+- GitHub: https://github.com/VipanKumar01
+- LinkedIn: https://www.linkedin.com/in/vipankumar01
+- Twitter/X: https://twitter.com/VipanKumar01
+- Instagram: https://www.instagram.com/vipan_singh9
+
+## Experience
+### Software Engineer — Sardeck Services Pvt. Ltd. (Current)
+- Contributes to Intradiem (US) microservices for a workforce automation platform serving 300K+ daily users.
+- Implemented multithreaded batch processing with a worker pool, achieving a 60–70% performance gain.
+- Built dynamic, event-driven background scheduling.
+
+### Software Developer — Benepik Technology (Previous)
+- Developed Spring Boot microservices and SSO-based authentication for enterprise clients.
+- Hardened Benepik Plus with JWT/OAuth2, AES encryption, HMAC integrity and transactional SAGA workflows.
+
+## Core Skills
+- Backend: Java, Spring Boot, Microservices, SAGA Pattern, Spring Batch, GraphQL
+- Messaging & Caching: Apache Kafka, RabbitMQ, Redis
+- Databases: MySQL, MS SQL Server, Firebase, Supabase
+- Frontend & Mobile: React.js, React Native (Expo), Tailwind CSS, JavaScript, HTML/CSS
+- DevOps & Cloud: Docker, Azure, AWS S3, GitLab CI/CD, Linux
+- Security & Testing: VAPT (OWASP), Burp Suite, JMeter, AES, HMAC, SonarQube
+
+## Key Projects
+- Intradiem Application — workforce automation microservices (case study: /work/intradiem)
+- Benepik Plus — secure payments platform (case study: /work/benepik-plus)
+- Live AI Interview App, AI Interview Prep App, Amazon Clone — React Native mobile apps
+- Netreach, Maktub, Travel Magic — UI/UX design in Figma
+
+## Education
+- Master of Computer Applications (MCA) — 2023–2025
+- Bachelor of Computer Applications (BCA) — 2020–2023

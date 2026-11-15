@@ -1,0 +1,15 @@
+/* TEAM */
+Author: Vipan Kumar
+Site: Vipan Kumar — Backend &amp; Full-Stack Developer
+Domain: https://vipankumar.tech
+Location: India
+Since: 2024
+Language: English
+
+/* SITE */
+Standards: HTML5, CSS3, ECMAScript (ES2022+)
+Components: React, Tailwind CSS, Framer Motion, Lenis, Lucide
+Platform: Node.js, Create React App (Craco)
+
+/* THANKS */
+Built with care for recruiters &amp; collaborators.

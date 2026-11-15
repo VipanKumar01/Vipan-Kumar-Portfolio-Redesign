@@ -4,9 +4,9 @@ const EASE = [0.7, 0, 0.2, 1];
 
 export const Logo = ({ className = "w-9 h-9" }) => (
   <svg viewBox="0 0 64 64" className={className} aria-hidden="true">
-    <rect width="64" height="64" rx="14" fill="currentColor" opacity="0.06" />
-    <path d="M12 16h9l9 24 9-24" fill="none" stroke="currentColor" strokeWidth="6" strokeLinejoin="round" />
-    <path d="M42 16v32M52 16 42 32l10 16" fill="none" stroke="#54F446" strokeWidth="6" strokeLinejoin="round" strokeLinecap="square" />
+    <rect width="64" height="64" rx="16" fill="currentColor" opacity="0.08" />
+    <path d="M11 18L22 46L33 18" fill="none" stroke="currentColor" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M43 15V49M54 15L43 32L54 49" fill="none" stroke="#54F446" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
